@@ -1,0 +1,353 @@
+header {
+	margin: 0 auto;
+	height: 500px;
+}
+
+header .header {
+	width: 1280px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: auto;
+	top: 18px;
+}
+
+
+
+
+.pg_title {
+	width: 100%;
+	height: 420px;
+	background: url(../images/bg_pg_title.png) no-repeat center top;
+	background-size: cover;
+	background-attachment: fixed;
+	position: absolute;
+	bottom: 0;
+}
+
+.pg_title .visual {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 360px;
+}
+
+.pg_title h1 {
+	font-size: 5rem;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0px 0px 8px rgba(50, 37, 22, .6);
+}
+
+.pg_title .menu {
+	width: 600px;
+	height: 60px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.pg_title .menu ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.pg_title .menu ul li {
+	width: 200px;
+	height: 100%;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	background-color: #000;
+	opacity: .7;
+
+	line-height: 60px;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.pg_title .menu ul li:hover {
+	opacity: 1;
+}
+
+.pg_title .menu ul li a {
+	display: block;
+	font-weight: 500;
+	color: #fff;
+}
+
+.pg_title .menu ul li.on {
+	background-color: #fff;
+	opacity: 1;
+}
+
+.pg_title .menu ul li.on a {
+	color: #322516;
+}
+
+
+
+
+
+
+
+
+
+#wrap {
+	width: 100%;
+	height: auto;
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(85, 51, 10, 1) 85%);
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 50%, rgba(85, 51, 10, 1) 85%);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(85, 51, 10, 1) 85%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#55330a', GradientType=0);
+
+}
+
+
+
+/*p1*/
+
+.p1 {
+	padding: 120px 0;
+	text-align: center;
+}
+
+.p1 img {
+	width: 240px;
+}
+
+.bg_line {
+	margin: 40px auto;
+	width: 100px;
+	height: 100px;
+	background: url(../images/bg_line.png) center repeat-y;
+	/*	background-color: aqua;*/
+}
+
+.p1 .txt1 {
+	font-family: 'Noto Serif', serif;
+	font-size: 3.2rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.p1 .txt2 {
+	font-weight: 500;
+	font-size: 1.6rem;
+	line-height: 1.6
+}
+
+
+
+
+
+/*p 공통 */
+
+.txt_head span {
+	font-weight: 600;
+	font-size: 2.4rem;
+}
+
+.txt_head {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	word-break: keep-all;
+}
+
+.txt1,
+.txt2 {
+	word-break: keep-all;
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+
+
+
+
+/*p2*/
+
+.p2 {
+	display: flex;
+	margin-top: 10px;
+	margin-bottom: 120px;
+}
+
+.p2 .p2-txt {
+	width: 750px;
+	padding-right: 80px;
+}
+
+.p2 img {
+	width: 480px;
+}
+
+
+
+
+/*p3*/
+
+.p3 {
+	display: flex;
+}
+
+.p3 img {
+	width: 480px;
+}
+
+.p3 .p3-txt {
+	width: 750px;
+	padding-left: 50px;
+}
+
+.p3 .p3-txt .txt1 {
+	margin-bottom: 20px;
+}
+
+
+
+
+/*tip*/
+
+.tip {
+	width: 980px;
+	height: auto;
+	margin: 220px auto 120px;
+	
+	display: flex;
+	justify-content: space-around;
+}
+
+.tip ul li {
+	width: 400px;
+	height: 100%;
+}
+
+.tip ul li img {
+	width: 100%; 
+}
+
+.tip ul li p {
+	width: 100%; 
+	padding: 40px;
+	background-color: #963e0f;
+	margin-top: -4px;
+	
+	text-align: center;
+	font-size: 1.9rem;
+	line-height: 2.2;
+	color: #fff;
+}
+
+.tip ul li p span {
+	font-weight: 600;
+	color: #fff;
+}
+
+
+
+
+/*toMenu*/
+
+.toMenu {
+	width: 100%;
+	height: 300px;
+	background: url(../images/bg_sub1_menu.png) center no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+.toMenu .txtBox {
+}
+
+.toMenu p {
+	font-family: 'Noto Serif KR', serif;
+	color: #fff;
+	text-align: center;
+	font-size: 3.6rem;
+	width: 80%;
+	margin: 70px auto 60px;
+}
+
+.toMenu .btn {
+	width: 196px;
+	height: 50px;
+	text-align: center;
+	border: 2px solid #fff;
+	margin: auto;
+	position: relative;
+	
+	overflow: hidden;
+}
+
+
+.toMenu .btn:before {
+	content: "";
+	width: 100%;
+  	height: 0%;
+  	transform: translate(-50%,-50%) rotate(90deg);
+	background-color: #fff;
+	position: absolute;
+/*	top: -2px;*/
+/*	right: -2px;*/
+	left: 100px;
+	z-index: -1;
+	transition: 0.3s linear;
+}
+
+.toMenu .btn:hover::before{
+	height: 550%;
+}
+
+.toMenu .btn:hover a {
+	color: #322516;	
+}
+
+.toMenu .btn:hover a .btn_on {
+	display: inline-block;
+	width: 22px;
+	vertical-align: middle;
+	margin-left: 8px;
+	padding-bottom: 4px;
+}
+
+.toMenu .btn:hover a .btn_off {
+	display: none;
+}
+
+
+
+.toMenu .btn a{
+	display: block;
+	
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 46px;
+	color: #fff;
+}
+
+.toMenu .btn a .btn_off {
+	width: 22px;
+	vertical-align: middle;
+	margin-left: 8px;
+	padding-bottom: 4px;
+}
+
+.toMenu .btn a .btn_on {
+	display: none;
+}
+
+
+
+
+
+footer {
+	border-top: 1px solid #9999;
+}

@@ -1,0 +1,356 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+/*공통 사항*/
+
+.paging {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.paging .pagination {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.paging a.pagination {
+    background: #f4eefc;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.paging a.pg {
+    border: 1px solid #dadada;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    margin-left: -5px;
+}
+
+.paging a.pagination.active,
+.paging a.pagination:hover {
+    background: #9c5df7;
+    color: #fff;
+}
+
+.paging a.pagination.active,
+.paging a.pagination:hover {
+    background: #9c5df7;
+    color: #fff;
+}
+
+.paging a.pg.first {
+    background: url(https://www.janet.co.kr/_nuxt/img/ll.686214d.png) 50% 50% no-repeat;
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+}
+
+.paging a.pg.prev {
+    background: url(https://www.janet.co.kr/_nuxt/img/l.c738c40.png) 50% 50% no-repeat;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+}
+
+.paging a.pg.next {
+    background: url(https://www.janet.co.kr/_nuxt/img/r.406a79a.png) 50% 50% no-repeat;
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+}
+
+.paging a.pg.last {
+    background: url(https://www.janet.co.kr/_nuxt/img/rr.f695f5d.png) 50% 50% no-repeat;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: -2px 10px 0 0;
+    background-image: url(../img/check-box.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span {
+    background-image: url(../img/check-box-on.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: -2px 10px 0 0;
+    background-image: url(../img/radio-box.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+    background-image: url(../img/radio-box-on.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+}
+
+
+
+/*1_1-좌측 사이드-상단 프로필*/
+
+.aside_wrap.userprofile_wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: auto;
+    margin: 0;
+    position: absolute;
+    left: 80px;
+    top: 50px;
+    height: auto;
+    background: #fff;
+    border-right: 1px solid #dfdfdf;
+    padding: 0;
+    z-index: 99;
+    border-radius: 10px;
+    box-shadow: -2.6px 1.5px 24px 0 rgba(47, 47, 47, 0.1);
+}
+
+.aside_wrap.fixed {
+    position: fixed;
+    top: 50px;
+    height: auto;
+    overflow-y: auto;
+}
+
+.userprofile_wrap .userprofile {
+    position: relative;
+    width: 200px;
+    height: auto;
+    border: 3px solid transparent;
+    background: linear-gradient(to right, white, white), linear-gradient(135deg, #add0ff, #bc8ff0);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 18px 24px;
+}
+
+.userprofile_wrap .userprofile .user_picture_wrap {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    box-shadow: inset 2.5px 1.7px 7px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 0 auto 8px;
+    position: relative;
+}
+
+/* 220324 수정 start */
+.userprofile_wrap .userprofile .user_picture {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.userprofile_wrap .userprofile .user_picture img {
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+/* 220324 수정 end */
+
+.userprofile_wrap .userprofile .user_picture_wrap .pic-change {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(152, 152, 152, 1) url(../img/icon-profileChange.png) no-repeat center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.userprofile_wrap .userprofile .username_wrap {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.userprofile_wrap .userprofile .username_wrap p {
+    font-weight: bold;
+    color: #292929;
+}
+
+.userprofile_wrap .userprofile .username_wrap p span {
+    font-weight: normal;
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .point {
+    font-size: 15px;
+    color: #292929;
+    font-weight: bold;
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .point span {
+    font-size: 12px;
+    color: #6e6e6e;
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .cm_cnt_wrap {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .cm_cnt_wrap li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .cm_cnt_wrap .cm_tit {
+    color: #242424;
+    letter-spacing: -0.5px
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .cm_cnt_wrap .cm_cnt {
+    float: right;
+    font-weight: bold;
+    color: #6e6e6e
+}
+
+.userprofile_wrap .userprofile .userinfo_wrap .cm_cnt_wrap .cm_cnt .unit {
+    font-weight: normal;
+}
+
+.userprofile_wrap .userprofile .btn_wrap {
+    width: 100%;
+    font-size: 14px;
+    color: #9c57f5
+}
+
+.userprofile_wrap .userprofile .btn_wrap .profile_btn {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    border-radius: 10px;
+    border: 2px solid #9c57f5;
+    font-weight: 500;
+}
+
+.userprofile_wrap .userprofile .btn_wrap .profile_btn.btn2 {
+    margin-top: 8px;
+}
+
+
+/*1_2-좌측 사이드-하단 카테고리*/
+
+#aside_wrap.mypage_aside {
+    top: 424px;
+}
+
+#aside_wrap.mypage_aside.fixed {
+    top: 422px;
+}
+
+#aside.mypage_aside {
+    padding: 0 0 0 0;
+}
+
+.lnb_1dli.last:after {
+    width: 0;
+}
+
+.btn_lnb_op .fa-window-minimize {
+    height: 1em;
+    font-weight: 500;
+    vertical-align: text-top;
+}
+
+.lnb_2dul {
+    display: block;
+}
+
+
+/*마이페이지 콘텐츠 시작*/
+
+.contents_wrap {
+    width: 1250px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+
+
+/*모달*/
+.modal_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    display: none;
+}
+
+.modal_wrap.on {
+    display: block;
+}
+
+.modal_wrap .blind {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+
+.modal_wrap .modal_box {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    z-index: 10001;
+}

@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+
+/*섹션1*/
+
+section {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.sec1 {
+    height: 800px;
+    background: url(../img/bg_sec1.png) center;
+    background-size: cover;
+}
+
+.sec1::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: url(../img/arrow.png) top;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: -40px;
+    z-index: 1;
+}
+
+.sec1 .txt {
+    padding-top: 120px;
+}
+
+.sec1 h1 {
+    margin: 0 auto 60px;
+    width: 809px;
+    height: 220px;
+    background: url(../img/title_sec1.png) center;
+    text-indent: -9999em;
+}
+
+.sec1 p {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 100px;
+}
+
+section a.btn {
+    display: inline-block;
+    width: 287px;
+    height: 79px;
+    background: url(../img/btn.png) top center;
+    background-size: cover;
+    text-indent: -9999em;
+}
+
+section a.btn:hover {
+    background-position: bottom 1px center;
+}
+
+
+
+/* 섹션2 */
+
+.sec2 {
+    height: 766px;
+    background: -moz-linear-gradient(-45deg,  rgba(173,207,255,0.3) 0%, rgba(181,176,248,0.3) 100%);
+background: -webkit-linear-gradient(-45deg,  rgba(173,207,255,0.3) 0%,rgba(181,176,248,0.3) 100%);
+background: linear-gradient(135deg,  rgba(173,207,255,0.3) 0%,rgba(181,176,248,0.3) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dadcfff', endColorstr='#4db5b0f8',GradientType=1 );
+}
+
+.sec2::before {
+    content: url(../img/bg_effect1.png);
+    width: 164px;
+    height: 680px;
+    position: absolute;
+    left: 40px;
+    bottom: -40px;
+}
+
+.sec2::after {
+    content: url(../img/bg_effect1.png);
+    width: 164px;
+    height: 680px;
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+
+.sec2 .txt {
+    padding-top: 130px;
+}
+
+.sec2 h2 {
+    margin: 0 auto 40px;
+    width: 391px;
+    height: 34px;
+    background: url(../img/title_sec2.png) center;
+    text-indent: -9999em;
+}
+
+.sec2 p {
+    width: 778px;
+    height: 196px;
+    margin: 0 auto 80px;
+    background: url(../img/img_sec2_p.png);
+    text-indent: -9999em;
+}
+
+.sec2 .flow {
+    width: 1120px;
+    height: 260px;
+    background: url(../img/img_effect1.png) no-repeat bottom right ;
+    background-size: contain;
+    margin: auto;
+}
+
+.sec2 .flow ul {
+    width: 1108px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec2 .flow ul li {
+    width: 220px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 30px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 4px 3px 12px rgba(37,17,88,.16);
+    position: relative;
+}
+
+.sec2 .flow ul li:nth-child(2) {
+    top: 100px;
+}
+
+.sec2 .flow ul li:nth-child(3) {
+    top: 60px;
+}
+
+.sec2 .flow ul li:nth-child(4) {
+    top: 20px;
+}
+
+
+
+/*섹션3*/
+
+.sec3 {
+    height: 890px;
+    background-color: #fafbfc;
+}
+
+.sec3::before {
+    content: url(../img/bg_effect2.png);
+    position: absolute;
+    left: 70px;
+    top: 40px;
+}
+
+.sec3::after {
+    content: url(../img/bg_effect2.png);
+    position: absolute;
+    transform: rotate(180deg);
+    right: 60px;
+    bottom: 60px;
+}
+
+.sec3 .txt {
+    padding-top: 100px;
+}
+
+.sec3 h2 {
+    margin: 0 auto 20px;
+    width: 369px;
+    height: 33px;
+    background: url(../img/title_sec3.png) center;
+    text-indent: -9999em;
+}
+
+.sec3 .process {
+    width: 1024px;
+    height: 665px;
+    margin: auto;
+    text-indent: -9999em;
+    background: url(../img/img_sec3.png);
+    position: relative;
+}
+
+.sec3 .process .animate_box {
+    position: absolute;
+    width: 231px;
+    height: 94px;
+    background: url(../img/img_flow1.png) no-repeat center;
+/*    top: 0;*/
+    left: 74px;
+    
+/*    애니메이션1  */
+    animation: motion 1s linear 0s infinite alternate;
+}
+
+@keyframes motion {
+    0% { top: 10px; }
+    100% { top: 20px; }
+}
+
+
+/*섹션4*/
+
+.sec4 {
+    height: 1324px;
+    background: -moz-linear-gradient(-45deg,  rgba(173,207,255,0.3) 0%, rgba(181,176,248,0.3) 100%);
+background: -webkit-linear-gradient(-45deg,  rgba(173,207,255,0.3) 0%,rgba(181,176,248,0.3) 100%);
+background: linear-gradient(135deg,  rgba(173,207,255,0.3) 0%,rgba(181,176,248,0.3) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dadcfff', endColorstr='#4db5b0f8',GradientType=1 );
+    padding-top: 120px;
+}
+
+.sec4::before {
+    content: url(../img/bg_effect1.png);
+    position: absolute;
+    left: 70px;
+    top: 60px;
+}
+
+.sec4::after {
+    content: url(../img/bg_effect1.png);
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    transform:rotate(0deg);
+transform: scaleX(-1); 
+}
+
+.sec4 h2 {
+    width: 512px;
+    height: 34px;
+    margin: 0 auto 60px;
+    background: url(../img/title_sec4.png) no-repeat;
+    text-indent: -9999em;
+}
+
+.sec4 .system {
+    text-indent: -9999em;
+    width: 1153px;
+    height: 1002px;
+    background: url(../img/img_sec4.png) no-repeat;
+    margin: auto;
+    position: relative;
+    right: 50px;
+}
+
+
+
+/* 섹션5 */
+
+.sec5 {
+    height: 2900px;
+    background: url(../img/bg_sec5.png) repeat-y;
+    background-size: contain;
+}
+
+.sec5 .txt {
+    padding: 120px 0 98px;
+}
+
+.sec5 h2 {
+    width: 437px;
+    height: 34px;
+    margin: 0 auto 46px;
+    background: url(../img/title_sec5.png) no-repeat;
+    text-indent: -9999em;
+}
+
+.sec5 p {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.sec5 .result1 {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.sec5 .box{
+    overflow: hidden;
+    box-shadow: 4px 4px 18px rgba(97,17,88,.19);
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.sec5 .result1 .box{
+    width: 395px;
+    height: 460px;
+}
+
+.sec5 .result1 .img1 {
+    right: 400px;
+    background: url(../img/img_sec5-1.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.sec5 .result1 .img2 {
+    background: url(../img/img_sec5-2.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.sec5 .result1 .img3 {
+    left: 400px;
+    background: url(../img/img_sec5-3.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+
+.sec5 .result2 {
+    position: relative;
+    top: 460px;
+}
+
+.sec5 .result2 .box {
+    width: 698px;
+    height: 324px;
+    background: url(../img/img_sec5-4.jpg) no-repeat top center;
+    background-size: cover;
+    margin-bottom: 140px;
+}
+
+
+.sec5 .result2 .animate_box {
+    animation: motion2 1s linear 0s infinite alternate;
+     position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+@keyframes motion2 {
+    0% { top: 10px; }
+    100% { top: 15px; }
+}
+
+.sec5 .result2 .box1 {
+    width: 431px;
+    height: 90px;
+    background: url(../img/img_flow2.png) no-repeat;
+    left: 840px;
+    margin-top: 70px;
+}
+
+.sec5 .result2 .box2 {
+    width: 431px;
+    height: 117px;
+    background: url(../img/img_flow3.png) no-repeat;
+    right: 560px;
+    margin-top: 280px;
+    z-index: 1;
+}
+
+
+.sec5 .result3 {
+    position: relative;
+    top: 974px;
+}
+
+.sec5 .result3 .box {
+    width: 698px;
+    height: 314px;
+    background: url(../img/img_sec5-5.png) no-repeat;
+    background-size: contain;
+}
+
+.sec5 .result3 .animate_box {
+    width: 513px;
+    height: 117px;
+    background: url(../img/img_flow4.png) no-repeat;
+    position: absolute;
+    margin-top: 270px;
+    left: 424px;
+    animation: motion2 1s linear 0s infinite alternate;
+}
+
+
+.sec5 .result4 {
+    position: relative;
+    top: 1478px;
+}
+
+.sec5 .result4 .box {
+    width: 698px;
+    height: 688px;
+    background: url(../img/img_sec5-6.jpg) no-repeat;
+    background-size: contain;
+}
+
+.sec5 .result4 .animate_box {
+    width: 513px;
+    height: 117px;
+    background: url(../img/img_flow5.png) no-repeat;
+    position: absolute;
+    margin-top: 600px;
+    right: 444px;
+    animation: motion2 1s linear 0s infinite alternate;
+}
+
+
+.sec6 {
+    height: 760px;
+    background: url(../img/bg_sec6.png);
+    background-size: cover;
+}
+
+.sec6 .txt {
+    padding-top: 150px;
+}
+
+.sec6 h1 {
+    width: 825px;
+    height: 293px;
+    background: url(../img/title_sec6.png) no-repeat;
+    margin: 0 auto 80px;;
+    text-indent: -9999em;
+}

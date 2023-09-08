@@ -1,0 +1,602 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+.mymanage_wrap {
+    display: flex;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+/*1-사이드*/
+
+
+.mymanage_wrap .aside_wrap.userprofile_wrap {
+    position: static;
+    margin-bottom: 30px;
+}
+
+.mymanage_wrap #aside_wrap.mypage_aside {
+    position: static;
+}
+
+
+
+/*2-나의 스펙 관리*/
+
+.mymanage_wrap .main {
+    width: 900px;
+    margin-left: 50px;
+}
+
+.mymanage_wrap .main .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mymanage_wrap .main .top h1 {
+    font-size: 22px;
+    color: #242424;
+}
+
+.mymanage_wrap .main h1::before {
+    content: url(../img/title-mySpec.png);
+    margin-right: 10px;
+}
+
+.mymanage_wrap .main .top .btn_download {
+    display: flex;
+    text-align: center;
+}
+
+.mymanage_wrap .main .top .btn_download > div {
+    width: 170px;
+  height: 34px;
+    line-height: 30px;
+    border-radius: 17px;
+    margin-left: 10px;
+    border: 1px solid #989898;
+    font-size: 14px;
+    color: #6e6e6e;
+    cursor: pointer;
+}
+
+
+/*입력란*/
+.mymanage_wrap .form {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(93, 93, 93, 0.2);
+}
+
+.mymanage_wrap .spec_containers {
+    padding: 30px 58px;
+}
+
+
+/*입력란-공통*/
+.mymanage_wrap .spec_containers h2 {
+    font-size: 16px;
+    color: #242424;
+    margin-bottom: 12px;
+}
+
+.mymanage_wrap .spec_containers h2 span {
+    font-weight: normal;
+}
+
+.mymanage_wrap .spec_containers > div > div {
+    margin-bottom: 16px;
+}
+
+.mymanage_wrap table {
+    table-layout: fixed;
+}
+
+.mymanage_wrap table tr {
+    height: 30px;
+}
+
+.mymanage_wrap table th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #6e6e6e;
+    padding-left: 6px;
+}
+
+.mymanage_wrap table td {
+    height: 50px;
+    padding-right: 10px;
+}
+
+.mymanage_wrap input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #dadada;
+    padding: 12px 14px;
+    font-size: 16px;
+}
+
+.mymanage_wrap .li-select-find {
+    position: relative;
+}
+
+.mymanage_wrap .li-select-find .icon_find {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon-find.png) no-repeat;
+    right: 26px;
+    top: 16px;
+    z-index: 1;
+}
+
+.mymanage_wrap .li-select-find .select_box {
+    display: none;
+        height: 160px;
+    background: #fff;
+    box-shadow: -5px 8.7px 40px 0 rgba(93, 93, 93, 0.16);
+    padding: 5px 10px 0 10px;
+        border-radius: 0 0 15px 15px;
+    -webkit-border-radius: 0 0 15px 15px;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    overflow-y: scroll;
+    z-index: 2;
+}
+
+.mymanage_wrap .li-select-find input:focus + .select_box {
+    display: block;
+}
+
+.mymanage_wrap .li-select-find .select_box li {
+    border-top: 1px solid #efefef;
+}
+
+.mymanage_wrap .li-select-find .select_box li a {
+    display: block;
+    font-size: 14px;
+    padding: 8px 0 8px 30px;
+    background: url(../img/arrow01.png) no-repeat 20px 12px;
+    background-size: 7px;
+}
+
+.mymanage_wrap .li-select-find .select_box li a:hover span{
+    background-color: rgba(224, 199, 255, 0.5);
+}
+
+.mymanage_wrap .li-select-find .select_box li a span {
+    display: inline-block;
+    min-height: 21px;
+    line-height: 21px;
+    padding: 0 8px 0 8px;
+    border-radius: 10px;
+}
+
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    color: #292929;
+    background: #fff;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox span {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 14px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    border: solid 1px #dadada;
+    cursor: pointer;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox span::before {
+    content: url(../img/arrow03.png);
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+    top: -2px;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    border: solid 1px #dadada;
+    border-top: transparent;
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox ul li {
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox ul li:hover {
+    background-color: #ede3fd;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox.active ul {
+    display: block;
+}
+
+.mymanage_wrap .spec_containers .selectWrap .selectBox.active span::before {
+    top: 4px;
+    transform: rotate(180deg);
+}
+
+.mymanage_wrap .spec_containers .btn_wrap {
+    width: 158px;
+    height: 40px;
+    position: relative;
+    left: 627px;
+}
+
+.mymanage_wrap .spec_containers .btn_plus {
+    width: 158px;
+    height: 40px;
+    line-height: 36px;
+    border-radius: 20px;
+    border: 1px solid #9c57f5;
+    font-size: 14px;
+  font-weight: bold;
+    color: #9c57f5;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mymanage_wrap .spec_containers .btn_plus .li-btn {
+    background-image: url(../img/icon-plus01.png);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+
+
+.mymanage_wrap .spec_containers .li-select2 > div,
+.mymanage_wrap .spec_containers .li-select4 > div,
+.mymanage_wrap .spec_containers .li-select5 {
+    position: relative;
+}
+
+.mymanage_wrap .spec_containers .delete_wrap {
+    width: 12px;
+    height: 11px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    top: 23px;
+    right: -22px;
+}
+
+.mymanage_wrap .spec_containers .delete_wrap .li-delete {
+    background-image: url(../img/delete01.png);
+    background-repeat: no-repeat;
+    background-size: 12px 11px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*입력란-보유 자격증*/
+.mymanage_wrap .licenseHold .td1 {
+    width: 334px;
+}
+
+.mymanage_wrap .licenseHold .td2 {
+}
+
+.mymanage_wrap .licenseHold .td3 {
+    padding-right: 0;
+}
+
+.mymanage_wrap .licenseHold table .select_box {
+    width: calc(100% - 10px);
+}
+
+.mymanage_wrap .licenseHold .btn_wrap .btn_plus {
+    position: absolute;
+    right: 0;
+}
+
+
+/*입력란-보유 어학 점수*/
+.mymanage_wrap .languageScore .td1 {
+    width: 178px;
+}
+
+.mymanage_wrap .languageScore .td1 .selectBox {
+    width: 100%;
+} 
+
+.mymanage_wrap .languageScore .td2 {
+    width: 324px;
+}
+
+.mymanage_wrap .languageScore table .td2 .select_box {
+    width: calc(100% - 10px);
+}
+
+.mymanage_wrap .languageScore .td3 {
+}
+
+.mymanage_wrap .languageScore .td4 {
+    padding-right: 0;
+}
+
+.mymanage_wrap .languageScore .btn_wrap .btn_plus {
+        position: absolute;
+        right: 0;
+}
+
+
+/*입력란-관심 자격증, 희망직종*/
+.mymanage_wrap .licenseHope .li-hope-input,
+.mymanage_wrap .occupationHope .li-hope-input {
+    position: relative;
+    width: 552px;
+    margin-bottom: 16px;
+}
+
+.mymanage_wrap .licenseHope .li-select-find .icon_find,
+.mymanage_wrap .occupationHope .li-select-find .icon_find {
+    right: 18px;
+    top: 12px;
+}
+
+.mymanage_wrap .licenseHope .li-select-find .select_box,
+.mymanage_wrap .occupationHope .li-select-find .select_box {
+     top: 40px;   
+}
+
+.mymanage_wrap .licenseHope .delete_wrap,
+.mymanage_wrap .occupationHope .delete_wrap {
+    right: -22px;
+    top: 0px;
+}
+
+.mymanage_wrap .licenseHope .btn_wrap,
+.mymanage_wrap .occupationHope .btn_wrap {
+    bottom: 55px;
+}
+
+.mymanage_wrap .licenseHope .btn_wrap .btn_plus,
+.mymanage_wrap .occupationHope .btn_wrap .btn_plus {
+    position: absolute;
+    right: 0;
+}
+
+
+/*입력란-최종학력*/
+.mymanage_wrap .lastEdu {
+    margin-bottom: 60px;
+}
+
+.mymanage_wrap .lastEdu .lastEdu_select .td1,
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .td1 {
+    width: 140px;
+}
+
+.mymanage_wrap .lastEdu .lastEdu_select .td1 .selectBox,
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .td1 .selectBox {
+    width: 100%;
+}
+
+.mymanage_wrap .lastEdu .select_box {
+     top: 40px;   
+}
+
+.mymanage_wrap .lastEdu .icon_find {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+/*    right: 18px;*/
+}
+
+.mymanage_wrap .lastEdu label {
+    font-size: 14px;
+  font-weight: 500;
+    color: #6e6e6e;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mymanage_wrap .lastEdu label input[type="checkbox"] + span {
+    margin: 0 6px 0 0;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap,
+.mymanage_wrap .lastEdu .edu2_wrap {
+    display: none;
+}
+
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 {
+    margin: 0 0 16px 140px;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1 .td1,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td1 {
+    width: 242px;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line2 .td1 .select_box {
+     top: 45px;   
+    width: calc(100% - 10px);
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1 .td1 .icon_find,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td1 .icon_find,
+.mymanage_wrap .lastEdu .edu2_wrap .line2 .td1 .icon_find,
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .td2 .icon_find {
+    right: 18px;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1 .td2,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td2,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td3,
+.mymanage_wrap .lastEdu .edu2_wrap .line2 .td2,
+.mymanage_wrap .lastEdu .edu2_wrap .line2 .td3 {
+    width: 108px;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1 .td3,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td4 {
+    width: 120px;
+}
+
+.mymanage_wrap .lastEdu .edu1_wrap .line1 .td3 .selectBox,
+.mymanage_wrap .lastEdu .edu2_wrap .line1 .td4 .selectBox {
+    width: 100%;
+}
+
+
+.mymanage_wrap .lastEdu .edu1_wrap .line2 .td1 {
+    width: 562px;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line2 .td1 {
+    width: 382px;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .td2 {
+    width: 350px;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 table {
+    margin-top: 16px;
+    display: none;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .works_wrap {
+    width: 100%;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .works_wrap textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 10px;
+    resize: none;
+    border: 1px solid #dadada !important;
+    font-size: 16px;
+    color: #242424;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap {
+    display: flex;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > div {
+    height: 36px;
+    border-radius: 18px;
+    line-height: 34px;
+    padding: 0 14px 0 30px;
+    margin: 18px 14px 0 0;
+    border: 1px solid #b678ff;
+    font-size: 14px;
+  font-weight: bold;
+    color: rgba(156, 87, 245, 0.8);
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > div.on {
+    display: block;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > div::before {
+    content: '+';
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    left: 14px;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > .delete_majors,
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > .delete_works {
+    font-weight: normal;
+    color: #989898;
+}
+
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > .delete_majors::before,
+.mymanage_wrap .lastEdu .edu2_wrap .line3 .add_btn_wrap > .delete_works::before {
+    content: '×';
+    font-size: 16px;
+}
+
+
+/*입력란-희망직종*/
+.mymanage_wrap .occupationHope .btn_wrap {
+    height: 0;
+}
+
+
+
+
+
+
+.mymanage_wrap .main .btn_center {
+    margin-top: 30px;
+        text-align: center
+}
+
+.mymanage_wrap .main .btn_center a {
+    height: 42px;
+    line-height: 40px;
+    font-size: 14px;
+  font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid #989898;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.mymanage_wrap .main .btn_center .btn_delete {
+    width: 70px;
+    color: #989898;
+}
+
+.mymanage_wrap .main .btn_center .btn_save {
+    width: 100px;
+    background-color: #9c57f5;
+    border-color: #9c57f5;
+    color: #fff;
+}

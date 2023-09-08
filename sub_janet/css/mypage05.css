@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+.mypost_wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+/*2-나의 게시글*/
+
+.mypost_wrap h1 {
+    font-size: 22px;
+    color: #242424;
+    font-weight: bold;
+    padding-left: 38px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.mypost_wrap h1::before {
+    content: url(../img/title-post.png);
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+
+/*리스트 상단*/
+
+.mypost_wrap .list_top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mypost_wrap .list_tab_wrap {
+    font-size: 16px;
+    color: #6e6e6e;
+}
+
+.mypost_wrap .list_tab_wrap span {
+    position: relative;
+    cursor: pointer;
+}
+
+.mypost_wrap .list_tab_wrap span.on {
+    font-weight: bold;
+    color: #9c57f5;
+}
+
+.mypost_wrap .list_tab_wrap .comment {
+    margin-left: 32px;
+}
+
+.mypost_wrap .list_tab_wrap .comment::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+  height: 20px;
+    background-color: #dadada;
+    left: -18px;
+    top: 3px;
+}
+
+.mypost_wrap .filter_wrap .tab {
+    display: none;
+}
+
+.mypost_wrap .filter_wrap .tab.on {
+    display: flex;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    color: #292929;
+    background: #fff;
+    margin-left: 20px;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox.select1 {
+    width: 130px
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox.select2 {
+    width: 120px
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox span {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    border: solid 1px #dadada;
+    cursor: pointer;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox span::before {
+    content: url(../img/arrow03.png);
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: -2px;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    border: solid 1px #dadada;
+    border-radius: 10px;
+    padding: 12px 0 0 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox ul li {
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox ul li:hover {
+    background-color: #ede3fd;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox.active ul {
+    display: block;
+}
+
+.mypost_wrap .filter_wrap .selectWrap .selectBox.active span::before {
+    top: 4px;
+    transform: rotate(180deg);
+}
+
+
+/*표*/
+.mypost_wrap .table_list {
+    text-align: center;
+    width: 100%;
+}
+
+.mypost_wrap .table_list .tab {
+    display: none;
+}
+
+.mypost_wrap .table_list .tab.on {
+    display: block;
+}
+
+.mypost_wrap .table_list .table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+.mypost_wrap .table_list .table thead tr {
+    height: 42px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 14px;
+    font-weight: normal;
+    color: #242424;
+}
+
+.mypost_wrap .table_list .table thead tr th {
+    height: 100%;
+    text-align: center;
+    line-height: 42px;
+    padding: 0;
+}
+
+.mypost_wrap .table_list .table thead tr .th-location {
+    width: 200px;
+} 
+
+.mypost_wrap .table_list .table thead tr .th-title {
+    width: 730px;
+}
+
+.mypost_wrap .table_list .table thead tr .th-vote {
+    width: 100px;
+}
+
+.mypost_wrap .table_list .table thead tr .th-view {
+    width: 100px;
+}
+
+.mypost_wrap .table_list .table thead tr .th-date {
+    width: 120px;
+}
+
+.mypost_wrap .table_list .table thead tr .th-comment_title {
+    width: 830px;
+}
+
+.mypost_wrap .table_list .table tbody tr {
+    border-top: 1px solid #ebe7ee;
+    border-bottom: 1px solid #ebe7ee;
+}
+
+.mypost_wrap .table_list .table tbody tr td {
+    padding: 16px;
+    color: #242424;
+    font-size: 16px;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-location {
+    font-size: 15px;
+    color: #6e6e6e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+.mypost_wrap .table_list .table tbody tr .td-title {
+    text-align: left;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-title a {
+    display: flex;
+    align-items: center;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-title .subject-icon {
+    padding-right: 10px;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-title .subject {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-title a > img {
+    margin-right: 8px;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-vote,
+.mypost_wrap .table_list .table tbody tr .td-view,
+.mypost_wrap .table_list .table tbody tr .td-date {
+    font-size: 13px;
+    color: #6e6e6e;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-comment {
+        display: inline-block;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    min-width: 30px;
+    padding: 2px 3px;
+    font-size: 11px;
+    line-height: 1;
+    color: #989898;
+    border: 1px solid #c699ff;
+    border-radius: 10px;
+}
+
+.mypost_wrap .table_list .table tbody tr .td-location a:hover,
+.mypost_wrap .table_list .table tbody tr .td-title a:hover .subject{
+   text-decoration: underline; 
+}
+
+.mypost_wrap .table_list .table tbody tr .td-user-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #959595;
+}
+
+.mypost_wrap .sound_only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+
+

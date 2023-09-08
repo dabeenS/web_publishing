@@ -1,0 +1,591 @@
+@charset "UTF-8";
+
+.inquiry_wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+/*    overflow: hidden;*/
+}
+
+
+/*2나의 1:1 문의-답변대기*/
+
+.inquiry_wrap h1 {
+    font-size: 22px;
+    color: #242424;
+    font-weight: bold;
+    padding-left: 32px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.inquiry_wrap h1::before {
+    content: url(../img/title-inquiry.png);
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+
+.inquiry_wrap .board_detail {
+    width: 100%;
+    text-align: left;
+    border-top: 2px solid #b678ff;
+}
+
+.inquiry_wrap .board_detail .board_detail_content {
+    padding: 20px 0 0;
+}
+
+.inquiry_wrap .board_detail_content h3.b_title {
+    height: 24px;
+    font-size: 18px;
+    background: url(../img/ico_subject.png) 3px 4px no-repeat;
+    padding: 0 0 0 30px;
+}
+
+.inquiry_wrap .board_detail_content .title_area {
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.inquiry_wrap .board_detail_content .title_area .writer .info {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.inquiry_wrap  .board_detail_content .title_area .writer .info .img_box {
+    margin: 10px 10px 10px 0px;
+}
+
+.inquiry_wrap .board_detail_content .title_area .writer .info span.name {
+    font-size: 14px;
+}
+
+.inquiry_wrap .board_detail_content .title_area .writer .info span.time {
+    font-size: 12px;
+    color: #aab0b9;
+    font-weight: 300;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state {
+     font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state span {
+    color: #989898;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state span::after {
+    content: '|';
+    padding: 12px;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state strong {
+    font-weight: normal;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state .state-wait {
+    color: #f15959;
+}
+
+.inquiry_wrap .board_detail_content .title_area .board_state .state-completion {
+    color: #9c57f5;
+}
+
+.inquiry_wrap .board_detail_content .memo_area {
+    border-style: solid;
+    border-image: linear-gradient(270deg, rgb(173, 208, 255, 0.4), rgb(188, 143, 240, 0.4));
+    border-image-slice: 1;
+    border-width: 1px;
+    border-left: 0;
+    border-right: 0;
+}
+
+.inquiry_wrap .board_detail_content .memo_area .memo_content {
+    padding: 20px 13px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #333;
+    font-weight: 400;
+    font-family: 'noto sans kr';
+    min-height: 150px;
+    margin: 0 auto;
+}
+
+.inquiry_wrap .board_detail_content .memo_area .memo_bottom {
+    margin: 30px 20px 20px;
+}
+
+.inquiry_wrap .board_detail_content .btn_wr {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.inquiry_wrap .board_detail_content .btn_wr a {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100px;
+  height: 40px;
+    line-height: 38px;
+    margin: 0 2px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.inquiry_wrap .board_detail_content .btn_wr a.none {
+    display: none;
+}
+
+.inquiry_wrap .board_detail_content .btn_wr .btn_modify,
+.inquiry_wrap .board_detail_content .btn_wr .btn_delete {
+    width: 100px;
+    background-color: #9c57f5;
+    border: 1px solid #9c57f5;
+    color: #fff;
+}
+
+.inquiry_wrap .board_detail_content .btn_wr .btn_list {
+     width: 120px;
+    border: 1px solid #9c57f5;
+    color: #9c57f5;
+}
+
+
+
+/*나의 1:1 문의-답변완료*/
+.inquiry_wrap .board_detail .answer_wrap > div {
+    border-top: 2px solid #b678ff;
+}
+
+.inquiry_wrap .answer_wrap .title_area .board_set {
+     display: flex;
+    padding-bottom: 10px;
+}
+
+.inquiry_wrap .answer_wrap .title_area .board_set > div {
+    width: 60px;
+  height: 30px;
+    border-radius: 10px;
+    border: 1px solid #989898;
+    color: #989898;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+/*답변쓰기*/
+.comment_area {
+    margin: 30px auto 0;
+}
+
+.comment_area h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+.comment_area .area {
+    border-top: 2px solid #b678ff;
+    padding: 20px 0 0;
+}
+
+.comment_area .area .box {
+    border: 1px solid #989898;
+    position: relative;
+    border-radius: 20px;
+    padding-top: 0;
+}
+
+.comment_area .area .box textarea.txt_input {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    resize: none;
+    border: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.comment_area .area .box textarea.txt_input {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    resize: none;
+    border: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.comment_area .area .box .file_hidden {
+    display: none;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 18px;
+}
+
+.comment_area .area .box .file_hidden.active {
+    display: table;
+}
+
+.comment_area .area .box .file_hidden label {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: normal;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    height: 39px;
+    padding: 6px 10px;
+    outline: none;
+    background: #fff;
+    color: #4b4b4d;
+    appearance: normal;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment_area .area .box .file_hidden div input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #b7b7b7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 6px 10px;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+    background: #fff;
+    color: #4b4b4d;
+    appearance: normal;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100px;
+    cursor: pointer;
+}
+
+.comment_area .area .box .file_hidden label .button {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    float: none;
+    height: 39px;
+    width: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    color: #b678ff;
+    border: 1px solid #b678ff;
+    cursor: pointer;
+}
+
+.comment_area .area .box .file_hidden .input-file input {
+    max-width: 90%;
+    border: 0;
+}
+
+
+.comment_area .area .box .movie_hidden {
+    display: none;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 18px;
+}
+
+.comment_area .area .box .movie_hidden div {
+    display: flex;
+}
+
+.comment_area .area .box .movie_hidden div input {
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px;
+    flex: 1;
+    border: 1px solid #b7b7b7;
+}
+
+.comment_area .area .box .movie_hidden div button {
+    font-size: 14px;
+    color: #b678ff;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #b678ff;
+    margin-left: 12px;
+    background: none;
+}
+
+.comment_area .area .box .movie_hidden button.movie_pop {
+    margin: 10px 0 0;
+    background: none;
+    border: 0;
+    font-size: 11px;
+    color: #989898;
+    text-decoration: underline;
+}
+
+
+.comment_area .area .box .etc_area {
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.comment_area .area .box .etc_area div:nth-child(1) {
+    margin-right: auto;
+}
+
+.comment_area .area .box .etc_area div:nth-child(2) {
+    margin-left: auto;
+}
+
+.comment_area .area .box .etc_area button.btn_emoticon {
+    border: 0;
+    margin-left: 15px;
+    padding-left: 20px;
+    background: url(../img/ico_emoticon.png) 0 20% no-repeat;
+}
+
+.comment_area .area .box .etc_area button.btn_emoticon.active {
+    color: #b678ff;
+    background: url(../img/ico_emoticon_active.png) 0 0 no-repeat;
+}
+
+.comment_area .area .box .etc_area button.btn_file {
+    border: 0;
+    margin-left: 15px;
+    padding-left: 20px;
+    background: url(../img/ico_file.png) 0 0 no-repeat;
+}
+
+.comment_area .area .box .etc_area button.btn_file.active {
+    color: #b678ff;
+    background: url(../img/ico_file_active.png) 0 0 no-repeat;
+}
+
+.comment_area .area .box .etc_area button.btn_movie {
+    border: 0;
+    margin-left: 15px;
+    padding-left: 20px;
+    background: url(../img/ico_movie.png) 0 0 no-repeat;
+}
+
+.comment_area .area .box .etc_area button.btn_movie.active {
+    color: #b678ff;
+    background: url(../img/ico_movie_active.png) 0 0 no-repeat;
+}
+
+
+#emoticon {
+    display: none;
+    z-index: 999;
+    width: 330px;
+    height: 290px;
+    position: absolute;
+    left: -1px;
+    background: #fff;
+    top: 100%;
+    border: 1px solid #989898;
+}
+
+#emoticon.active {
+    display: table;
+}
+
+#emoticon .top {
+    height: 55px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+#emoticon .top button.btn_prev {
+    border: 0;
+    border-right: 1px solid #e0e0e0;
+    width: 30px;
+    height: 100%;
+    background: url(../img/arrow_left.png) 50% 50% no-repeat;
+}
+
+#emoticon .top ul {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#emoticon .top ul li.active {
+    background: #fbf8ff;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+#emoticon .top ul li.active:first-child {
+    border-left: 0;
+}
+
+#emoticon .top ul li {
+    padding: 0;
+    border-bottom: 0;
+    cursor: pointer;
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    text-align: center;
+}
+
+#emoticon .top button.btn_next {
+    border: 0;
+    border-left: 1px solid #e0e0e0;
+    width: 30px;
+    height: 100%;
+    background: url(../img/arrow_right.png) 50% 50% no-repeat;
+}
+
+.defaultImg {
+    width: 50px;
+}
+
+#emoticon .list {
+    background: #fbf8ff;
+    height: 232px;
+    overflow-y: auto;
+    padding: 10px;
+    display: none;
+}
+
+#emoticon .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#emoticon .list ul li {
+    cursor: pointer;
+    width: 33%;
+    text-align: center;
+    margin: 0 0 10px;
+    border-bottom: 0;
+}
+
+
+
+
+.comment_area .area .box .etc_area button.btn_write {
+    border: 0;
+    width: 125px;
+    height: 50px;
+    background: #b678ff;
+    color: #fff;
+    font-size: 16px;
+    border-bottom-right-radius: 20px;
+}
+
+/*답변쓰기-동영상 모달*/
+#popup_movie {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 9999999;
+}
+
+#popup_movie .container {
+    position: relative;
+    width: 580px;
+    height: 430px;
+    border-radius: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 5px 8px #aaa;
+}
+
+#popup_movie .container::before {
+    display: table;
+    content: " ";
+}
+
+#popup_movie .container::after {
+    clear: both;
+}
+
+#popup_movie .container button.movie_pop_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: url(../img/close.jpg) 50% 50% no-repeat;
+}
+
+#popup_movie .container h4 {
+    text-align: left;
+    background: url(../img/ico_arrow.jpg) 0 50% no-repeat;
+    padding-left: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+#popup_movie .container table {
+    width: 100%;
+    margin: 15px 0 30px;
+}
+
+#popup_movie .container table th.first {
+    width: 210px;
+}
+
+#popup_movie .container table th {
+    font-size: 14px;
+    text-align: center;
+    color: #b678ff;
+    border-top: 1px solid #b678ff;
+    border-bottom: 1px solid #b678ff;
+    height: 35px;
+    background: #f8f1ff;
+}
+
+#popup_movie .container table td.first {
+    text-align: left;
+    padding-left: 60px;
+}
+
+#popup_movie .container table td.last {
+    text-align: left;
+}
+
+#popup_movie .container table td {
+    height: 31px;
+    font-size: 14px;
+    color: #292929;
+    border-bottom: 1px solid #e0e0e0;
+}

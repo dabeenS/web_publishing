@@ -1,0 +1,259 @@
+@charset "uft-8";
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #191716;
+/*	border-radius: 6px;*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+* {
+  margin: 0;
+	padding: 0;
+	color: #6D2D19;
+	font-weight: 300;
+	box-sizing: border-box;
+	word-break: keep-all;
+	scroll-behavior: smooth;
+  font-family: 'Pretendard';
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	vertical-align: baseline;
+}
+
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+/* 네비 */
+.nav {
+  /* width: 50%; */
+  width: 0%;
+  height: 100%;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  background-color: #ffa15a;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+.nav #nav_btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 56px;
+  top: 55px;
+  cursor: pointer;
+
+  display: none;
+}
+
+.nav #nav_btn::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #fff;
+	top: 10px;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+.nav #nav_btn:hover::before {
+	opacity: .8;
+}
+
+.nav #nav_btn span {
+	width: 20px;
+	height: 2px;
+	background-color: #6D2D19;
+	position: absolute;
+}
+
+.nav #nav_btn .t_stick {
+	top: 25px;
+	left: 10px;
+  transform: rotate(225deg);
+}
+
+.nav #nav_btn .b_stick {
+	top: 25px;
+	left: 10px;
+  transform: rotate(-225deg);
+}
+
+.nav .gnb {
+  width: 100%;
+  padding: 8px 44px;
+}
+
+.nav .gnb > li {
+  margin-bottom: 44px;
+}
+
+.nav .gnb h2 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.nav .gnb h2 span {
+  font-size: 16px;
+}
+
+.nav .gnb .list > li {
+  margin-top: 20px;
+}
+
+.nav .gnb .list h3 {
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+
+.nav .gnb .list h3::before {
+  content: "";
+  width: 0%;
+  height: 20px;
+  bottom: 0;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+  transition: 0.2s ease-in;
+}
+
+.nav .gnb .list h3:hover:before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+}
+
+.nav .gnb .list h3 span {
+  font-size: 16px;
+}
+
+.nav .gnb .list p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+
+/* 콘텐츠 */
+.contents {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* 콘텐츠 > 헤더 */
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  width: 40px;
+  height: 40px;
+}
+
+header h1 img {
+  width: 100%;
+  height: 100%;
+  transition: 0.7s ease-in;
+}
+
+header h1:hover img {
+	transform: rotateY(360deg);
+}
+
+header #menu_btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+header #menu_btn::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #ffa15a;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+header #menu_btn:hover::before {
+	opacity: .4;
+}
+
+header #menu_btn span {
+	width: 20px;
+	height: 2px;
+	background-color: #6D2D19;
+	position: absolute;
+}
+
+header #menu_btn .t_stick {
+	top: 11px;
+	left: 10px;
+}
+
+header #menu_btn .m_stick {
+	top: 19px;
+	left: 10px;
+}
+
+header #menu_btn .b_stick {
+	top: 27px;
+	left: 10px;
+}

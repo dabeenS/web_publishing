@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pointhistory_wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+/*탭메뉴*/
+
+.pointhistory_wrap .tab_menu {
+    height: 55px;
+    width: 100%;
+    background: -webkit-linear-gradient(-90deg, rgba(173, 208, 255, .2), rgba(188, 143, 240, .2));
+    background: linear-gradient(-90deg, rgba(173, 208, 255, .2), rgba(188, 143, 240, .2));
+    box-shadow: 0 2px 6px 0 rgb(69 31 119 / 20%);
+    padding-top: 2px;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul {
+    width: 100%;
+    max-width: 1250px;
+    height: 100%;
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    color: #989898;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul li {
+    width: 33.33%;
+    height: 100%;
+    line-height: 50px;
+    border: 3px solid transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul li.on {
+    color: #9c57f5;
+    opacity: 1;
+    background: linear-gradient(to right, white, white), linear-gradient(135deg, #add0ff, #bc8ff0);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    position: relative;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul li.on::after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.pointhistory_wrap .tab_menu .tab_wrap ul li:hover a {
+    color: #9c57f5;
+}
+
+
+/*2-포인트 내역 관리*/
+
+.pointhistory_contents h1 {
+    font-size: 22px;
+    color: #242424;
+    font-weight: bold;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.pointhistory_contents h1::before {
+    content: url(../img/title-pointhistory.png);
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+
+/*리스트 상단*/
+.pointhistory_contents .list_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.pointhistory_contents .list_top .point {
+    color: #292929;
+}
+
+.pointhistory_contents .list_top .point::before {
+    content: url(../img/icon-point2.png);
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+}
+
+.pointhistory_contents .list_top .point .tit {
+    font-size: 16px;
+}
+
+.pointhistory_contents .list_top .point strong {
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+.pointhistory_contents .list_top .point strong .unit {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.pointhistory_contents .filter_wrap {
+    display: flex;
+}
+
+.pointhistory_contents .filter_wrap .calendar {
+    position: relative;
+}
+
+.pointhistory_contents .filter_wrap .calendar::before {
+    position: absolute;
+    left: 208px;
+    top: 20px;
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background: #242424;
+}
+
+.pointhistory_contents .filter_wrap .calendar input {
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    margin: 0 0 0 27px;
+    padding: 0 45px 0 0;
+    border-radius: 10px;
+    border: solid 1px #dadada;
+    overflow: hidden;
+    font-size: 16px;
+    color: #242424;
+    padding: 0 20px 0 20px;
+    background: url("../img/icon-calendar.png") no-repeat 128px center;
+}
+
+.pointhistory_contents .filter_wrap .calendar img {
+    display: none;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    color: #292929;
+    background: #fff;
+    margin-left: 20px;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox span {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    border: solid 1px #dadada;
+    cursor: pointer;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox span::before {
+    content: url(../img/arrow03.png);
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: -2px;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox ul {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    border: solid 1px #dadada;
+    border-radius: 10px;
+    padding: 12px 0 0 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox ul li {
+    cursor: pointer;
+    padding: 0 20px 0 20px;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox ul li:hover {
+    background-color: #ede3fd;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox.active ul {
+    display: block;
+}
+
+.pointhistory_contents .filter_wrap .selectWrap .selectBox.active span::before {
+    top: 4px;
+    transform: rotate(180deg);
+}
+
+.pointhistory_contents .filter_wrap .search_btn {
+    width: 76px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #9c57f5;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pointhistory_contents .filter_wrap .search_btn:hover {
+    opacity: 0.8;
+}
+
+
+/*표*/
+.pointhistory_contents .table_list {
+    text-align: center;
+    width: 100%;
+}
+
+.pointhistory_contents .table_list .table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+.pointhistory_contents .table_list .table thead tr {
+    height: 42px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 14px;
+    font-weight: normal;
+    color: #242424;
+}
+
+.pointhistory_contents .table_list .table thead tr th {
+    height: 100%;
+    text-align: center;
+    line-height: 42px;
+    padding: 0;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-date {
+    width: 160px;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-name {
+    width: 430px;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-history {
+    width: 140px;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-point {
+     width: 160px;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-sum {
+    width: 200px;
+}
+
+.pointhistory_contents .table_list .table thead tr .th-expiration {
+   width: 160px;
+}
+
+.pointhistory_contents .table_list .table tbody tr {
+    border-top: 1px solid #ebe7ee;
+    border-bottom: 1px solid #ebe7ee;
+}
+
+.pointhistory_contents .table_list .table tbody tr td {
+    padding: 16px 10px;
+    color: #242424;
+    font-size: 16px;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-date,
+.pointhistory_contents .table_list .table tbody tr .td-expiration {
+    width: 160px;
+    font-size: 15px;
+    color: #6e6e6e;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-name {
+    width: 430px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    text-align: left;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-history {
+    width: 140px;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-history.history-plus {
+    color: #9c57f5;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-history.history-minus {
+    color: #f15959;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-point {
+     width: 160px;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-sum {
+    width: 200px;
+}
+
+.pointhistory_contents .table_list .table tbody tr .td-point span,
+.pointhistory_contents .table_list .table tbody tr .td-sum span {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*리스트 상단-달력*/
+.ui-datepicker.ui-widget-content {
+    border: solid 1px #dadada !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header {
+    border-bottom: 1px solid #EEEEEE !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-next {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-next span {
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    width: 30px;
+    height: 45px;
+    background: url("../img/arrow03.png") no-repeat center center;
+    transform: rotate(270deg);
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-prev {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-prev span {
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    width: 30px;
+    height: 45px;
+    background: url("../img/arrow03.png") no-repeat center center;
+    transform: rotate(90deg);
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-title select {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 2px 30px 2px 10px;
+    margin: 0 0 0 5px;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-title select option:hover {
+    background: rgba(224, 199, 255, 0.5) !important;
+    -webkit-box-shadow: 0 0 10px 100px orange inset;
+    box-shadow: 0 0 10px 100px orange inset;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-title select option:checked {
+    background: rgba(224, 199, 255, 0.5) !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-header .ui-datepicker-title select:first-child {
+    margin: 0;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-calendar thead tr th span {
+    color: #6e6e6e !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-calendar span {
+    font-size: 14px !important;
+    color: #ccc !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-calendar a {
+    font-size: 14px !important;
+    color: #6e6e6e !important;
+    width: 28px !important;
+    height: 28px !important;
+    line-height: 26px;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-calendar a.ui-state-active {
+    background-color: rgba(224, 199, 255, 0.5) !important;
+    border: 1px solid #fff !important;
+}
+
+.ui-datepicker.ui-widget-content .ui-datepicker-calendar a:hover {
+    background-color: rgba(224, 199, 255, 0.5) !important;
+    border: 1px solid #fff !important;
+}

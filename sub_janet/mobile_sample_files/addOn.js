@@ -1,0 +1,1 @@
+var preLoader=function(f){$("#"+f).preloader();}

@@ -1,0 +1,41 @@
+.my_dday .dday_list li.no-data {
+    background: url(../img/img-nodday.png) no-repeat center 112px;
+}
+
+.my_dday .dday_list li.no-data dl dt {
+    color: #292929;
+    font-weight: 500;
+    width: 160px;
+    white-space: pre-wrap;
+    overflow: auto;
+    text-overflow: clip;
+}
+
+.my_dday .dday_list li.no-data dl dd {
+    letter-spacing: -0.6px;
+}
+
+.my_dday .dday_list li.no-data .date {
+    display: none;
+}
+
+
+.my_lic_wrap .lic_wrap .lic_list .no-data {
+    padding: 185px 0 20px;
+    text-align: center;
+    font-size: 18px;
+  font-weight: 500;
+    color: #989898;
+    background: url(../img/img-nodata.png) no-repeat center 26px;
+}
+
+.my_lic_wrap .lic_wrap .lic_list .no-data .point {
+    color: #9c57f5;
+    border-bottom: 1px solid #9c57f5;
+    font-weight: bold;
+}
+
+
+.my_lic_wrap .hopelic_wrap .lic_list .no-data {
+    padding-bottom: 0;
+}

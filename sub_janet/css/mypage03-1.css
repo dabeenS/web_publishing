@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.contents_wrap.pointshop_wrap {
+    width: 100%;
+    background: url(../img/bg-pointMarket.png) no-repeat;
+    background-size: cover;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+/*페이지네이션 수정*/
+
+.paging a.pg.first {
+    background: #fff url(https://www.janet.co.kr/_nuxt/img/ll.686214d.png) 50% 50% no-repeat;
+}
+
+.paging a.pg.prev {
+    background: #fff url(https://www.janet.co.kr/_nuxt/img/l.c738c40.png) 50% 50% no-repeat;
+}
+
+.paging a.pg.next {
+    background: #fff url(https://www.janet.co.kr/_nuxt/img/r.406a79a.png) 50% 50% no-repeat;
+}
+
+.paging a.pg.last {
+    background: #fff url(https://www.janet.co.kr/_nuxt/img/rr.f695f5d.png) 50% 50% no-repeat;
+}
+
+.paging a.pagination {
+    background-color: #fff;
+}
+
+
+
+/*탭메뉴*/
+
+.pointshop_wrap .colorBg2 {
+    background: -webkit-linear-gradient(-90deg,rgba(241,233,252,1),rgba(239,245,255,1));
+    background: linear-gradient(-90deg,rgba(241,233,252,1),rgba(239,245,255,1));
+}
+
+.pointshop_wrap #tab_wrap.sub_tab {
+    overflow: hidden;
+}
+
+
+/* 2-포인트 상점 */
+
+.pointshop_wrap .pointshop {
+    width: 1250px;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.pointshop_wrap .pointshop .bg_twinkle {
+    width: 813px;
+  height: 472px;
+    background: url(../img/bg-twinkle.png);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 26px;
+}
+
+.pointshop_wrap .pointshop h1 {
+    width: 462px;
+    height: 220px;
+    background: url(../img/title-pointShop.png) no-repeat;
+    margin: 14px auto 0;
+    position: relative;
+    font-size: 0;
+}
+
+.pointshop_wrap .pointshop h1::before {
+    content: url(../img/img-balloon01.png);
+    position: absolute;
+    top: 50px;
+    right: -30px;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap {
+    width: 636px;
+    height: 198px;
+    margin: 44px auto 0;
+    padding-top: 59px;
+    color: #fff;
+    background: url(../img/bg-nickBox.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap strong {
+    font-size: 16px;
+  font-weight: 600;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap strong span {
+      font-weight: normal;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap .point {
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap .point span::before {
+    content: url(../img/icon-point.png);
+    position: relative;
+    top: 4px;
+    margin-right: 6px;
+}
+
+.pointshop_wrap .pointshop .shop_area .point_wrap .point em {
+    margin-left: 12px;
+}
+
+
+/*아이템 목록 - 공통 */
+
+.pointshop_wrap .pointshop .item_container {
+    width: 100%;
+    position: relative;
+}
+
+.pointshop_wrap .pointshop .item_container .title_wrap {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 2px 12px 0 rgba(0, 0, 0, 0.1), inset -0.5px -3px 14px 0 rgba(0, 0, 0, 0.14);
+}
+
+.pointshop_wrap .pointshop .item_container .item_list {
+    width: 100%;
+    height: 828px;
+    border-radius: 0 0 20px 20px;
+    background: url(../img/bg-itemBox.png) no-repeat top left;
+    background-size: cover;
+    box-shadow: 0px 2px 36px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list.on {
+    display: block;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap {
+    padding: 20px 85px 6px;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li {
+    width: 200px;
+  height: 230px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-bottom: 20px;
+  box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li:hover {
+    box-shadow: 0px 1px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box {
+    padding: 16px 14px 12px;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_box,
+.pointshop_wrap .purchase_modal .item_box .icon_box {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_box img,
+.pointshop_wrap .purchase_modal .item_box .icon_box img {
+    object-fit: contain;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_title,
+.pointshop_wrap .purchase_modal .item_box .icon_title {
+    padding: 10px 0 12px;
+    margin-bottom: 0;
+    border-bottom: 1px dashed #dadada;
+  font-weight: 500;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_title dt,
+.pointshop_wrap .purchase_modal .item_box .icon_title dt {
+     font-size: 16px;
+    color: #242424;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_title dd,
+.pointshop_wrap .purchase_modal .item_box .icon_title dd {
+    font-size: 14px;
+    color: #6e6e6e;
+    letter-spacing: -0.5px;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_price,
+.pointshop_wrap .purchase_modal .item_box .icon_price {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_price .rank,
+.pointshop_wrap .purchase_modal .item_box .icon_price .rank {
+    font-size: 14px;
+  font-weight: 500;
+    color: #6e6e6e;
+    padding-right: 8px;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_price .price,
+.pointshop_wrap .purchase_modal .item_box .icon_price .price {
+    color: #242424;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .item_box .icon_price .price span,
+.pointshop_wrap .purchase_modal .item_box .icon_price .price span {
+    font-size: 18px;
+  font-weight: 900;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .btn_purchase {
+    width: 100%;
+    height: 54px;
+    font-size: 0;
+    cursor: pointer;
+    background: url(../img/btn-purchase.png) no-repeat center;
+}
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li .btn_purchase.com {
+    background: url(../img/btn-purCom.png) no-repeat center;
+    cursor: default;
+} 
+
+.pointshop_wrap .pointshop .item_container .item_list .list_wrap ul li.none_box {
+    background: url(../img/img-preparing.png) no-repeat center;
+    font-size: 0;
+}
+
+
+
+
+
+/*아이템 목록 - 전체 아이템*/
+
+.pointshop_wrap .pointshop .item_container.all_item::after {
+    content: url(../img/img-balloon02.png);
+    position: absolute;
+    right: -146px;
+    top: -130px;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap {
+    background: linear-gradient(to top, rgba(110, 106, 117, 1), rgba(99, 94, 114, 1));
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag li {
+    width: 174px;
+  height: 64px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_all {
+    background: url(../img/img-all.png) no-repeat top 6px center;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_all.on {
+    background: url(../img/img-all-on.png) no-repeat center;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_free {
+    background: url(../img/img-free.png) no-repeat top 6px center;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_free.on {
+    background: url(../img/img-free-on.png) no-repeat center;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_general {
+    background: url(../img/img-general.png) no-repeat top 6px center;
+}
+
+.pointshop_wrap .pointshop .item_container.all_item .title_wrap .case_tag .tag_general.on {
+    background: url(../img/img-general-on.png) no-repeat center;
+}
+
+
+
+
+
+
+
+/*아이템 목록 - 프리미엄 아이템*/
+
+.pointshop_wrap .pointshop .item_container.premium_item::before {
+    content: url(../img/bg-rod.png);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: -2px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item {
+    padding-top: 30px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .title_wrap {
+    background: linear-gradient(to top, rgba(115, 41, 238, 1), rgba(93, 45, 230, 1));
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .title_wrap::before {
+    content: url(../img/img-highlight.png);
+    position: absolute;
+    left: -19px;
+    top: 11px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .title_wrap h3 {
+    font-size: 20px;
+    color: #fff;
+    line-height: 80px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .title_wrap h3::before {
+    content: url(../img/icon-premium.png);
+    position: absolute;
+    top: 20px;
+    right: 559px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .item_list::before {
+    content: url(../img/img-highlight.png);
+    position: absolute;
+    transform: rotate(180deg);
+    left: -18px;
+    bottom: -20px;
+}
+
+.pointshop_wrap .pointshop .item_container.premium_item .item_list .paging {
+    position: relative;
+}
+
+
+
+/* 모달 1&2 공통 */
+
+.pointshop_wrap .purchase_modal .modal_box {
+    width: 300px;
+  height: 477px;
+  border-radius: 15px;
+    background-color: #fff;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .close_btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url(../img/btn-close.png);
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.pointshop_wrap .purchase_modal .modal_box h2 {
+    padding: 26px 0 14px 24px;
+    font-size: 20px;
+  font-weight: bold;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(135deg, #add0ff, #bc8ff0);
+    border-image-slice: 1;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .item_box {
+    text-align: center;
+    padding: 24px;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .item_box .icon_title {
+    border-bottom: 0;
+}
+
+
+
+.pointshop_wrap .purchase_modal .modal_box .btn_wrap {
+    text-align: center;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .btn_wrap span {
+    display: inline-block;
+    margin: 0 6px 24px;
+    height: 42px;
+    border-radius: 10px;
+    border: 2px solid #9c57f5;
+    line-height: 38px;
+    font-size: 14px;
+  font-weight: 500;
+    cursor: pointer;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .btn_wrap .btn1 {
+    width: 80px;
+    color: #9c57f5;
+}
+
+.pointshop_wrap .purchase_modal .modal_box .btn_wrap .btn2 {
+    width: 160px;
+    color: #fff;
+    background-color: #9c57f5;
+}
+
+
+
+
+
+/* 모달 1 - 구매1 */
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box {
+    padding: 0 24px 12px;
+}
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box ul li strong {
+    font-size: 14px;
+  font-weight: 500;
+    color: #6e6e6e;
+}
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box ul li em {
+     font-size: 18px;
+  font-weight: bold;
+    color: #f15959;
+}
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box ul li.price {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.pointshop_wrap .purchase_modal01 .modal_box .payment_box ul li.total {
+    padding-top: 14px;
+}
+
+
+
+/* 모달 2 - 구매2 */
+
+.pointshop_wrap .purchase_modal02 h3 {
+    text-align: center;
+    font-size: 16px;
+    color: #9c57f5;
+    margin: 28px 0 10px;
+}
+
+.pointshop_wrap .purchase_modal02 h3::before {
+    content: url(../img/img-check.png);
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+
+.pointshop_wrap .purchase_modal02 .item_box {
+    margin-bottom: 26px;
+}
+
+.pointshop_wrap .purchase_modal02 .modal_box .btn_wrap a {
+    display: inline-block;
+}
+
+.pointshop_wrap .purchase_modal02 .modal_box .btn_wrap span {
+    margin: 0;
+}
+
+.pointshop_wrap .purchase_modal02 .modal_box .btn_wrap .btn1 {
+    width: 252px;
+    margin-bottom: 12px;
+}
+
+.pointshop_wrap .purchase_modal02 .modal_box .btn_wrap .btn2 {
+    width: 252px;
+    margin-bottom: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

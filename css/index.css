@@ -1,0 +1,172 @@
+@charset "uft-8";
+
+
+.contents_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffa15a;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* 콘텐츠 > 인포 */
+.info {
+  width: 100%;
+  height: calc(100% - 88px);
+  padding-top: 60px;
+  padding-left: 4px;
+}
+
+.info .p {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.info .p > div {
+  width: 50%;
+}
+
+.info h1 {
+  font-size: 40px;
+  font-weight: 800;
+  padding-left: 16px;
+  position: relative;
+}
+
+.info .p2 h1 {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.info .p2 h1 span {
+  font-size: 16px;
+}
+
+.info .name::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #6D2D19;
+  left: -2px;
+  top: 18px;
+
+  animation: rotate 5s linear infinite;
+	animation-direction: normal;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.info h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.info h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.info h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.info ul.line {
+  margin-top: 20px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.info ul.line::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: calc(100% - 20px);
+  background-color: #6D2D19;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.info ul li {
+  padding-bottom: 8px;
+  font-weight: 400;
+}
+
+.info ul .tit {
+  padding-bottom: 8px;
+}
+
+.info ul .date {
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+.info ul .act {
+  margin-top: 16px;
+}
+
+.info ul .act p {
+  margin-left: 8px;
+  font-weight: 400;
+} 
+
+.info .p2 ul {
+  margin-bottom: 28px;
+}
+
+.info .p2 li {
+  margin-top: 8px;
+}
+
+.info .p2 li h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.info .p2 li h3::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 0;
+  height: 23px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 161, 90, .4);
+  transition: 0.5s ease;
+}
+
+.info .p2 li h3:hover::before {
+  width: 100%;
+}
+
+.info .p2 .date {
+  font-weight: 400;
+}
+
+.info .p2 .tag {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
+/* 콘텐츠 > 푸터 */
+
+footer p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}

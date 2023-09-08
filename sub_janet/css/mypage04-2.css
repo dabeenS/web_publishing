@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+.inquiry_wrap {
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+
+/*2-나의 1:1 문의*/
+
+.inquiry_wrap h1 {
+    font-size: 22px;
+    color: #242424;
+    font-weight: bold;
+    padding-left: 32px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.inquiry_wrap h1::before {
+    content: url(../img/title-inquiry.png);
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+
+/*본문*/
+
+.inquiry_wrap .board-write-box {
+    padding: 30px 80px;
+    border: 1px solid #e5e5e5;
+}
+
+.inquiry_wrap .board-write-box .title-input {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.inquiry_wrap .board-write-box .title-input .input {
+    width: 100%;
+}
+
+.inquiry_wrap .board-write-box .title-input input {
+        font-size: 16px;
+    font-weight: normal;
+    color: #6e6e6e;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #989898;
+    text-indent: 13px;
+    border-radius: 10px;
+}
+
+.inquiry_wrap .board-write-box textarea {
+    width: 100%;
+    height: 500px;
+}
+
+.inquiry_wrap .btb_wrap {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.inquiry_wrap .btb_wrap .btn_submit {
+    width: 100px;
+  height: 42px;
+    border-radius: 10px;
+    background-color: #9c57f5;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.inquiry_wrap .btb_wrap .btn_delet {
+    display: inline-block;
+    width: 100px;
+  height: 42px;
+    line-height: 40px;
+    border-radius: 10px;
+    border: 1px solid #6e6e6e;
+    color: #6e6e6e;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
