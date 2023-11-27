@@ -64,6 +64,7 @@
     box-shadow: 0px 3px 12px 0 rgba(47, 47, 47, 0.1);
     border: solid 3px #eaf1ff;
     position: relative;
+    text-align: left;
     transition: box-shadow 0.2s ease;
 }
 
@@ -154,6 +155,7 @@
     padding-left: 31px;
     margin-bottom: 30px;
     position: relative;
+    text-align: left;
 }
 
 .my_lic_wrap h1::before {
@@ -190,6 +192,7 @@
     font-size: 18px;
     font-weight: 500;
     position: relative;
+    text-align: left;
 }
 
 .my_lic_wrap .lic_wrap .title_wrap .txt p {
@@ -331,6 +334,7 @@
 .my_lic_wrap .own_lic_wrap .lic_list .lic_list_box > li .text_wrap {
     width: 432px;
     padding: 24px;
+    text-align: left;
 }
 
 .my_lic_wrap .own_lic_wrap .lic_list .lic_list_box .name_text {
@@ -471,6 +475,7 @@
     border: 3px solid #fff;
     background-color: #fff;
     border-radius: 20px;
+    text-align: left;
 }
 
 .my_lic_wrap .own_lic_wrap .lic_list .lic_list_box .datalab_wrap .tab_box > div .rank_box ul li.num5 {
@@ -631,6 +636,7 @@
     height: 100%;
     background-color: #f2f2ff;
     padding: 24px;
+    text-align: left;
 }
 
 .my_lic_wrap .hopelic_wrap .lic_list .lic_list_box li .txt_wrap .name_text {

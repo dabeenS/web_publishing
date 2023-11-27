@@ -22,7 +22,7 @@
 * {
   margin: 0;
 	padding: 0;
-	color: #6D2D19;
+	color: #492F28;
 	font-weight: 300;
 	box-sizing: border-box;
 	word-break: keep-all;
@@ -60,7 +60,7 @@ img {
   height: 100%;
   /* overflow-y: auto; */
   overflow: hidden;
-  background-color: #ffa15a;
+  background-color: #ff8036;
   position: absolute;
   right: 0;
   z-index: 1;

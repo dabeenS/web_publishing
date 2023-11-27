@@ -171,6 +171,7 @@
     padding-left: 35px;
     margin-bottom: 30px;
     position: relative;
+    text-align: left;
 }
 
 .calendar_wrap .todo_wrap h1::before {

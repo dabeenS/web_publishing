@@ -4,7 +4,7 @@
 .contents_wrap {
   width: 100vw;
   height: 100vh;
-  background-color: #ffa15a;
+  background-color: #ff8036;
   padding: 40px;
   position: relative;
   overflow: hidden;
@@ -15,8 +15,8 @@
 /* 콘텐츠 > 인포 */
 .info {
   width: 100%;
-  height: calc(100% - 88px);
-  padding-top: 60px;
+  height: fit-content;
+  padding-top: 5vh;
   padding-left: 4px;
 }
 
@@ -165,6 +165,11 @@
 
 
 /* 콘텐츠 > 푸터 */
+
+footer {
+  position: fixed;
+  bottom: 56px;
+}
 
 footer p {
   font-size: 14px;

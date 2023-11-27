@@ -15,6 +15,7 @@
     padding-left: 32px;
     margin-bottom: 30px;
     position: relative;
+    text-align: left;
 }
 
 .inquiry_wrap h1::before {

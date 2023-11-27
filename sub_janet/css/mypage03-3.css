@@ -92,6 +92,7 @@
     padding-left: 30px;
     margin-bottom: 30px;
     position: relative;
+    text-align: left;
 }
 
 .pointhistory_contents h1::before {

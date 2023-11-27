@@ -3,14 +3,10 @@
 .contents_wrap {
   width: 100vw;
   height: 100vh;
-  background-color: #ffa15a;
+  background-color: #ff8036;
   padding: 40px;
   position: relative;
   overflow-y: auto;
-}
-
-.contents {
-  /* padding: 0; */
 }
 
 
